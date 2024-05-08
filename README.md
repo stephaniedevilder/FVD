@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** -Stephanie de Vilder-
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -14,7 +14,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
+  1. (https://codepen.io/qrac/pen/MRPJLB)
   2. -bron 2-
   3. -...-
 
@@ -23,20 +23,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Opdracht 1 plan
 
 <details open>
-  <summary>uitwerken na schetsen idee (voor week 2)</summary>
+  <summary>Ik wil met het logo van 'Lime' een animatie gaan maken.Dit logo heeft een doorgesneden limoen in het logo en dit lijkt een beetje op een wiel. Lime is een bedrijf die electrische stepjes aanbied in bepaalde steden. Hierdoor wil ik het limoentje in mijn animatie laten rollen als een wiel, waarbij de letters ervoor uitwijken.</summary>
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard-lime.png" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
- 
+  - Responsiveness
+  - Light dark mode
+  - Verzorgde code
+
+
 </details>
 
 
