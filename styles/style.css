@@ -2,50 +2,71 @@
 
 :root{
 	--main-color: #06D500;
-	--light-color: rgb(202, 255, 43);
+	--accent-color: rgb(202, 255, 43);
+	--background-color: rgb(244, 254, 241);
 }
 
 @media (prefers-color-scheme:dark) {
 	:root {
-		--main-color: darkgreen;
-		--light-color: rgb(60, 177, 64);
+		--main-color: rgb(202, 255, 43);
+		--accent-color: #06D500;
+		--background-color: #012406;
 	}
+}
+
+body{
+	height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 24vw; /* text meer naar het midden zodat het wiel niet buiten het scherm valt */
+	padding-top: 4vw;
+
+	background-color: var(--background-color);
+}
+
+main {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: baseline;
+	gap: 3vw;
 }
 
 /****Letters****/
 
 h1{
-    font-family: 'Bodoni Moda', serif;
+    margin: 0;
+
+	display: flex;
+	
     font-family: 'Exo', sans-serif;
-    font-size: 11em;
+    font-size: 16vw;
     color: var(--main-color);
-    margin-top: 1.5em;
-    margin-left: 2.7em;
-	letter-spacing: -0.11em;
 }
 
 h1 > span{
-	display: inline-block;
-	animation: text-up 1.7s ease-in-out;
+	position: relative;
+
+	display: block;
+
+	animation: text-up 1.9s ease-in-out;
 }
 
 h1 > span:nth-of-type(1){
-    position: relative;
     animation-delay: 0.0s;
 }
 
 h1 > span:nth-of-type(2){
-    position: relative;
     animation-delay: 0.2s;
 }
 
 h1 > span:nth-of-type(3){
-    position: relative;
     animation-delay: 0.3s;
 }
 
 h1 > span:nth-of-type(4){
-    position: relative;
 	animation-delay: 0.5s;
 }
 
@@ -54,95 +75,68 @@ h1 > span:nth-of-type(4){
 	  transform: translateY(0em);
 	}
 	60%{
-	  transform: translateY(-1.7em);
+	  transform: translateY(-1.6em);
 	}
 	100%{
 	  transform: translateY(0em);
 	}
-  }
+}
+
 
 /****lime wheel****/
 
-ul {
-	position:relative;
-	top: -24.5em;
-	left: 9em;
+div {
+	position: relative;
 	
-	margin:0;
-	padding:0;
-	list-style:none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 	
-	width:18em;
-	height:18em;
-	
+	width: 19.2vw;
+	height: 19.2vw;
+
+	background-color: var(--accent-color);
 	background-image:
 		radial-gradient(
-			var(--main-color) 0.7em, 
-			transparent 0.7em,
-			transparent 8em, 
-			var(--main-color) 8em
+			var(--main-color) .8vw, 
+			transparent 0.8vw 6.8vw, 
+			var(--background-color) 6.8vw 8.2vw,
+			var(--main-color) 8.2vw
+		),
+		linear-gradient(
+			60deg,
+			transparent calc(50% - .72vw),
+			var(--background-color) calc(50% - .72vw),
+			var(--background-color) calc(50% + .72vw),
+			transparent calc(50% + .72vw)
+		),
+		linear-gradient(
+			120deg,
+			transparent calc(50% - .72vw),
+			var(--background-color) calc(50% - .72vw),
+			var(--background-color) calc(50% + .72vw),
+			transparent calc(50% + .72vw)
+		),
+		linear-gradient(
+			transparent calc(50% - .72vw),
+			var(--background-color) calc(50% - .72vw),
+			var(--background-color) calc(50% + .72vw),
+			transparent calc(50% + .72vw)
 		);
+
+	 border-radius: 50%;
 	
-	border-radius:50%;
-	animation: wheel-roll 2.4s ease-in-out;
+	 animation: wheel-roll 2.4s ease-in-out;
+	 animation-fill-mode: forwards; 
 }
 
-li {
-	position:absolute;
-	top:2em;
-	left:4em;
-		
-	width:10em;
-	height:5.9em;
-	
-	background-color: var(--light-color);
-	
-	border-radius:50% 50% 0% 0% / 50% 50% 0% 0% ;
-	
-	clip-path: polygon(
-		16% 0, 
-		84% 0,  
-		50% 100%,
-		16% 0 
-	);
 
-    transform-origin:center calc(100% + 1.1em);
-	
-
-}
-
-li:nth-of-type(1) {
-	transform:rotate(0deg);
-}
-
-li:nth-of-type(2) {
-	transform:rotate(60deg);
-}
-
-li:nth-of-type(3) {
-	transform:rotate(120deg);
-}
-
-li:nth-of-type(4) {
-	transform:rotate(180deg);
-}
-
-li:nth-of-type(5) {
-	transform:rotate(240deg);
-}
-
-li:nth-of-type(6) {
-	transform:rotate(300deg);
-}
-
-@keyframes wheel-roll{
-	0%{
+@keyframes wheel-roll {
+	7%{
 	  transform: translatex(0em) rotate(0);
 	}
 	
-	
 	100%{
-		transform: translatex(52.5em) rotate(.93turn);
-	  }
-  }
-
+		transform: translatex(63vw) rotate(.93turn);
+	}
+}
